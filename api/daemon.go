@@ -149,6 +149,9 @@ func (srv *Server) daemonStopHandler(w http.ResponseWriter, req *http.Request) {
 	if srv.wallet != nil {
 		srv.wallet.Close()
 	}
+	if srv.blocke != nil {
+		srv.blocke.Close()
+	}
 
 	// can't write after we stop the server, so lie a bit.
 	writeSuccess(w)
