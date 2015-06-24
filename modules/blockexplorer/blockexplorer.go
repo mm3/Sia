@@ -48,10 +48,6 @@ type BlockExplorer struct {
 	activeContractCost types.Currency
 	totalContractCost  types.Currency
 
-	// Stores a few data points for each block:
-	// Timestamp, target and size
-	blockSummaries []modules.ExplorerBlockData
-
 	// Keep a reference to the consensus for queries
 	cs modules.ConsensusSet
 
